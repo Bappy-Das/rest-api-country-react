@@ -14,7 +14,14 @@ const Countries = () => {
             <h1>Hello from Countries :{countrieses.length}</h1>
             <div className="single-country">
                 {
-                    countrieses.map(country => <Country name={country.name} capital={country.capital} flag={country.flag} population={country.population}></Country>)
+                    countrieses.map(country => <Country
+                        key={country.capital}
+                        country={country}
+                    // name={country.name}
+                    // capital={country.capital}
+                    // flag={country.flag}
+                    // population={country.population}
+                    ></Country>)
                 }
             </div>
         </div>
